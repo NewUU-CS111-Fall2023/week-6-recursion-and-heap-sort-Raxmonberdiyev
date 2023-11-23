@@ -75,15 +75,15 @@ int main() {
     std::cout << "Task 6" << std::endl;
 
     int i = 0;
-    int numbers[100];
+    int n[100];
     while (true) {
-        std::cin >> numbers[i];
-        if (numbers[i] == 0) {
+        std::cin >> n[i];
+        if (n[i] == 0) {
             break;
         }
         i++;
     }
-    int secondLargestNumber = secondLargest(numbers, i);
+    int secondLargestNumber = secondLargest(n, i);
     std::cout << secondLargestNumber << std::endl;
 
     std::cout << "/////////////////////////////////////" << std::endl;

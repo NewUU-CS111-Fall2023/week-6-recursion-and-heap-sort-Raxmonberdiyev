@@ -3,19 +3,19 @@
  * Date:
  * Name:
  */
-
-int secondLargest(int numbers[], int n) {
+using namespace std;
+int secondLargest(int n[], int n) {
     if (n == 1) {
-        return numbers[0];
+        return n[0];
     } else {
-        int largest = std::max(numbers[0], numbers[1]);
-        int secondLargest = std::min(numbers[0], numbers[1]);
+        int largest =max(n[0], n[1]);
+        int secondLargest =min(n[0], n[1]);
         for (int i = 2; i < n; i++) {
-            if (numbers[i] > largest) {
+            if (n[i] > largest) {
                 secondLargest = largest;
-                largest = numbers[i];
-            } else if (numbers[i] > secondLargest) {
-                secondLargest = numbers[i];
+                largest = n[i];
+            } else if (n[i] > secondLargest) {
+                secondLargest = n[i];
             }
         }
         return secondLargest;

@@ -5,21 +5,21 @@
  */
 #include <cmath>
 
-bool isNumberPrime(int n, int divisor) {
+bool isNumberPrime(int n, int d) {
     if (n <= 1) {
         return false;
     }
-    if (divisor == 1) {
+    if (d == 1) {
         return true;
     }
-    if (n % divisor == 0) {
+    if (n % d == 0) {
         return false;
     }
 
-    return isNumberPrime(n, divisor - 1);
+    return isNumberPrime(n, d - 1);
 }
 
 bool isPrime(int n) {
-    int divisor = static_cast<int>(sqrt(n));
-    return isNumberPrime(n, divisor);
+    int d = static_cast<int>(sqrt(n));
+    return isNumberPrime(n, d);
 }
